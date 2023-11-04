@@ -12,12 +12,12 @@ module tt_um_jkprz (
 );
 
         //parameter int WEIGHT = 1;
-        reg [7:0] junk = 0'8b00000000;
+        reg [7:0] junk = 8'b00000000;
 
         // use bidirectionals as outputs
         assign uio_oe = 8'b11111111;
         //assign uio_out[5:0] = 6'd0;
-        assign uio_out[6:0] = 7'd0;
+        assign uio_out[5:0] = 6'd0;
 
 
         if(!ena) // error unhappy with not using ena or uio_in
