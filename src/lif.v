@@ -38,7 +38,14 @@ module lif (
     // next state = Ut+1, and state = Ut.  This equation is Ut+1 = I + Ut * beta where beta is the weighting
     // Example code he shift uses (state >> 1)+(state >> 2)+(state >> 3) which gives 0.5+0.25+0.125=0.875 but I will change the weights for STDP
     //[OLD] assign next_state = (spike ? 0 : current) + (spike ? 0 : (state >> 1)+(state >> 2)+(state >> 3));
-    assign next_state = (spike ? 0 : current) + (spike ? 0 : (beta*(state >> 1)+(state >> 2)+(state >> 3)));
+    if (beta) // beta controls the weights
+        begin
+            assign next_state = (spike ? 0 : current) + (spike ? 0 : (state >> 1)); // big weight
+        end
+    else
+        begin
+            assign next_state = (spike ? 0 : current) + (spike ? 0 : (state >>3)); // small weight
+        end
     //assign next_state = (spike ? 0 : current) + (spike ? 0 : (state >> 1)+(state >> 2)+(state >> 3));
 
 endmodule
