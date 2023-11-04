@@ -12,7 +12,7 @@ module tt_um_jkprz (
 );
 
         //parameter int WEIGHT = 1;
-        reg [7:0] junk = 0'b00000000;
+        //reg [7:0] junk = 0'b00000000;
 
         // use bidirectionals as outputs
         assign uio_oe = 8'b11111111;
