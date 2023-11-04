@@ -24,7 +24,7 @@ module tb (
     wire [7:0] state = uo_out[7:0];
     wire       spike = uio_out [7];
 
-# comment
+// literally trash
 
     tt_um_lif tt_um_lif_jkprz (
         .ui_in      (ui_in),    // Dedicated inputs
