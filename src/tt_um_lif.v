@@ -19,15 +19,15 @@ module tt_um_lif (
 
     // instantiate lif neuron
     //lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .spike(uio_out[7]), .state(uo_out));
-    lif lif7(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[7]), .state(uo_out));
-    lif lif6(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[6]), .state(uo_out));
-    lif lif5(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[5]), .state(uo_out));
-    lif lif4(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[4]), .state(uo_out));
-    lif lif3(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[3]), .state(uo_out));
-    lif lif2(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[2]), .state(uo_out));
-    lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[1]), .state(uo_out));
-    lif lif0(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[0]), .state(uo_out));
-    //lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b11111111), .spike(uio_out[7]), .state(uo_out)); // [KNOWN GOOD]
+    lif lif7(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[7]), .state(uo_out));
+    lif lif6(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[6]), .state(uo_out));
+    lif lif5(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[5]), .state(uo_out));
+    lif lif4(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[4]), .state(uo_out));
+    lif lif3(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[3]), .state(uo_out));
+    lif lif2(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[2]), .state(uo_out));
+    lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[1]), .state(uo_out));
+    lif lif0(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[0]), .state(uo_out));
+    //lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b11111111), .spike(uio_out[7]), .state(uo_out)); // [KNOWN GOOD]
     // lif lif2(.current({uio_out[7], 7'b0000000}), .clk(clk), .rst_n(rst_n), .spike(uio_out[6]), .state(uo_out));
 
 endmodule
