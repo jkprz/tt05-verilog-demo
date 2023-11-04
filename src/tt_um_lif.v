@@ -18,8 +18,8 @@ module tt_um_lif (
     assign uio_out[6:0] = 6'd0;
 
     // instantiate lif neuron
-    lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .spike(uio_out[7]), .state(uo_out));
-    //lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(WEIGHT), .spike(uio_out[7]), .state(uo_out));
+    //lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .spike(uio_out[7]), .state(uo_out));
+    lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(1'b0), .spike(uio_out[7]), .state(uo_out));
     // lif lif2(.current({uio_out[7], 7'b0000000}), .clk(clk), .rst_n(rst_n), .spike(uio_out[6]), .state(uo_out));
 
 endmodule
