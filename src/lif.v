@@ -4,13 +4,10 @@ module lif (
     input wire [7:0] current,
     input wire       clk,
     input wire       rst_n,
-                    beta, // weighting not in original code
+    input reg [1:0] beta, // weighting not in original code
     output wire      spike,
     output reg [7:0] state
 );
-
-input beta;
-reg[1:0] beta;
 
     reg [7:0] threshold;
     wire [7:0] next_state;
