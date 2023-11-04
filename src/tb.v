@@ -26,7 +26,7 @@ module tb (
 
 // literally trash
 
-    tt_um_jkprz tt_um_jkprz (
+    tt_um_jkprz tt_um_jkprz1 (
         .ui_in      (ui_in),    // Dedicated inputs
         .uo_out     (uo_out),   // Dedicated outputs
         .uio_in     (uio_in),   // IOs: Input path
