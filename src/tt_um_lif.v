@@ -11,7 +11,7 @@ module tt_um_lif (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    parameter int WEIGHT = 1.0;
+    parameter int WEIGHT = 1;
 
     // use bidirectionals as outputs
     assign uio_oe = 8'b11111111;
