@@ -10,6 +10,8 @@ module lif_network (
 
     wire [7:0] l1_out; // One output per lif neuron
     wire [63:0] l1_state;
+
+    parameter int WEIGHT = 1;
 <<<<<<< HEAD
     // wire [7:0] sum_in;
 =======
@@ -17,14 +19,14 @@ module lif_network (
     reg  [7:0] sum; // register to hold the summation
 
     //Instantiate 8 lif neurons
-    lif lif1(.current(current[0]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[0]), .state(l1_state[7:0]));
-    lif lif2(.current(current[1]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[1]), .state(l1_state[15:8]));
-    lif lif3(.current(current[2]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[2]), .state(l1_state[23:16]));
-    lif lif4(.current(current[3]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[3]), .state(l1_state[31:24]));
-    lif lif5(.current(current[4]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[4]), .state(l1_state[39:32]));
-    lif lif6(.current(current[5]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[5]), .state(l1_state[47:40]));
-    lif lif7(.current(current[6]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[6]), .state(l1_state[55:48]));
-    lif lif8(.current(current[7]), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(l1_out[7]), .state(l1_state[63:56]));
+    lif lif1(.current(current[0]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[0]), .state(l1_state[7:0]));
+    lif lif2(.current(current[1]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[1]), .state(l1_state[15:8]));
+    lif lif3(.current(current[2]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[2]), .state(l1_state[23:16]));
+    lif lif4(.current(current[3]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[3]), .state(l1_state[31:24]));
+    lif lif5(.current(current[4]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[4]), .state(l1_state[39:32]));
+    lif lif6(.current(current[5]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[5]), .state(l1_state[47:40]));
+    lif lif7(.current(current[6]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[6]), .state(l1_state[55:48]));
+    lif lif8(.current(current[7]), .clk(clk), .rst_n(rst_n), beta(WEIGHT), .spike(l1_out[7]), .state(l1_state[63:56]));
 
     // Summing logic
 
