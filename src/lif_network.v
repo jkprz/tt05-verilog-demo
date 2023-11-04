@@ -56,6 +56,6 @@ end
 =======
 >>>>>>> parent of b7aa3cf (separate combinational logic from sequential logic)
     // Output neuron
-    lif output_neuron (.current(sum), .clk(clk), .rst_n(rst_n), beta(0.875), .spike(spike_out), .state(state_out));
+    lif output_neuron (.current(sum), .clk(clk), .rst_n(rst_n), beta(1), .spike(spike_out), .state(state_out));
 
 endmodule
