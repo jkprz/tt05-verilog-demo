@@ -15,11 +15,12 @@ module tt_um_jkprz (
 
     // use bidirectionals as outputs
     assign uio_oe = 8'b11111111;
-    assign uio_out[6:0] = 6'd0;
+    assign uio_out[5:0] = 5'd0;
 
     // instantiate lif neuron
     //lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .spike(uio_out[7]), .state(uo_out));
     lif lif1(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b00000011), .spike(uio_out[7]), .state(uo_out));
+    lif lif2(.current(ui_in), .clk(clk), .rst_n(rst_n), .beta(8'b00000011), .spike(uio_out[6]), .state(uo_out));
     // lif lif2(.current({uio_out[7], 7'b0000000}), .clk(clk), .rst_n(rst_n), .spike(uio_out[6]), .state(uo_out));
 
 endmodule
